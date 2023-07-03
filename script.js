@@ -42,7 +42,7 @@ async function makeup(){
               <div class="card-body">
               <h5>${res1[i].brand}</h5>
               <p>${res1[i].name}</p>
-              <p>$${res1[i].price}</p>
+              <p>Price:$${res1[i].price}</p>
               <p>${res1[i].product_link}</p>
               </div>
               <div class="dropdown">
