@@ -33,10 +33,11 @@ async function makeup(){
 
     for(var i=0; i<res1.length; i++){
         try {
-            
+
+      
             row.innerHTML+=
-                    `<div class="col-md-4">
-                    <div class="card bg-light mb-3" style="max-width: 18rem;">
+                    `
+                    <div class="card bg-light mb-3 p-3" style="max-width: 18rem;">
                     <img src="${res1[i].image_link}" class="card-img-top" alt="Product out of stock" onerror="this.src='${res1[89].image_link}';">
               
               <div class="card-body">
@@ -52,16 +53,19 @@ async function makeup(){
   <ul class="dropdown-menu">
     <li><p class="dropdown-item">${res1[i].description}</p></li>
   </ul>
-</div>
+</div><br>
             
-            </div>
+            
                         
                     </div>`
         
                     document.body.append(container)
         
       
-    }
+             }
+           
+           
+
         catch (error) {
             console.log(error)
         }
@@ -82,14 +86,14 @@ async function brandName(){
   for(let i=0; i<newData1.length; i++){
      try {
       if(result===newData1[i].brand){
-        searchProduct.innerHTML+=`<div class="col-md-4">
+        searchProduct.innerHTML+=`
         <div class="card bg-light mb-3" style="max-width: 18rem;">
         <img src="${newData1[i].image_link}" class="card-img-top" alt="Product out of stock" onerror="this.src='${newData1[89].image_link}';">
   
   <div class="card-body">
   <h5>${newData1[i].brand}</h5>
   <p>${newData1[i].name}</p>
-  <p>$${newData1[i].price}</p>
+  <p>Price:$${newData1[i].price}</p>
   <p>${newData1[i].product_link}</p>
   </div>
   <div class="dropdown">
@@ -99,9 +103,10 @@ Description
 <ul class="dropdown-menu">
 <li><p class="dropdown-item">${newData1[i].description}</p></li>
 </ul>
+<br>
 </div>
 
-</div>
+
             
         </div>`
   
@@ -114,3 +119,4 @@ Description
  
 
 }
+
